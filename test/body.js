@@ -48,7 +48,7 @@ describe('req body', function() {
   it('posts to a wildcard route', function(done) {
     var postData = {key: 'asfasdfasdfasdf'};
 
-    this.proxyOptions.url = 'http://localhost:' + this.apiPort + '/api/*';
+    this.proxyOptions.url = 'http://localhost:' + this.apiPort + '/api/(.*)';
     this.remoteApi.post('/api/v1/token', function(req, res, next) {
       res.json({path: req.path});
     });

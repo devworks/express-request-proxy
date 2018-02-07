@@ -91,7 +91,7 @@ describe('requestOptions', function() {
     };
 
     var endpointOptions = {
-      url: 'http://someapi.com/:version/*'
+      url: 'http://someapi.com/:version/(.*)'
     };
 
     var opts = requestOptions(req, endpointOptions);
@@ -109,7 +109,7 @@ describe('requestOptions', function() {
     };
 
     var endpointOptions = {
-      url: 'http://domain.com/api/auth/*'
+      url: 'http://domain.com/api/auth/(.*)'
     };
 
     var opts = requestOptions(req, endpointOptions);
